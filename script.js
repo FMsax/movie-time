@@ -1,6 +1,14 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
+// Responsive canvas size
+function resizeCanvas() {
+  canvas.width = Math.min(window.innerWidth * 0.95, 800);
+  canvas.height = Math.min(window.innerHeight * 0.6, 400);
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
 let gameRunning = true;
 let score = 0;
 
@@ -22,7 +30,7 @@ const obstacleWidth = 40;
 const obstacleGap = 200; // distance between obstacles
 const obstacleSpeed = 4;
 
-// Handle controls (keyboard)
+// Controls (keyboard)
 document.addEventListener("keydown", (e) => {
   if (e.code === "Space" && gameRunning) {
     blub.velocity = -blub.bounce;
@@ -31,8 +39,8 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Handle controls (mouse/tap)
-canvas.addEventListener("click", () => {
+// Controls (touch anywhere on screen)
+document.addEventListener("touchstart", () => {
   if (gameRunning) {
     blub.velocity = -blub.bounce;
   } else {
@@ -116,7 +124,7 @@ function gameOver() {
   }, 1000);
 }
 
-// Restart game if needed
+// Restart game
 function restartGame() {
   gameRunning = true;
   score = 0;
