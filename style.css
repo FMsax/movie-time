@@ -1,21 +1,106 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #f0f8ff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  h1 {
-    color: #333;
-  }
-  
-  canvas {
-    border: 2px solid #333;
-    background: #dff9fb;
-    border-radius: 10px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f0f8ff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+canvas {
+  border: 2px solid #333;
+  background: #dff9fb;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+/* Game Over Invitation Page */
+body.gameover {
+  background: #2c3e50;
+  color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.invitation {
+  text-align: center;
+  background: #34495e;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  max-width: 500px;
+}
+
+.invitation h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.invitation h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.invitation span {
+  color: #f1c40f;
+}
+
+.details {
+  text-align: left;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.details strong {
+  color: #f1c40f;
+}
+
+.details span {
+  color: #1abc9c;
+  font-weight: bold;
+}
+
+.code {
+  background: #e74c3c;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.invitation button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #e74c3c;
+  color: #fff;
+}
+
+.invitation button:hover {
+  background: #c0392b;
+}
