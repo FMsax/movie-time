@@ -10,11 +10,13 @@
   <div class="invitation">
     <h1>🎉 This is your official invitation 🎉</h1>
     <h2>to the <span>SITCOM AND SPAGHETTI</span> movie night</h2>
-    
+
+    <p id="finalScore"></p>
+
     <div class="details">
       <p><strong>📅 Date:</strong> <span>07 / 09 / 2025</span></p>
       <p><strong>🎭 Vibe:</strong> It promises to be <em>fun</em>, <em>exciting</em>, and <em>unforgettable</em>!</p>
-      <p><strong>🔑 Code for Entry:</strong> <span class="code">Q289, how to use code would be explained </span></p>
+      <p><strong>🔑 Code for Entry:</strong> <span class="code">Q289</span></p>
       <p><strong>🎬 Movie:</strong> To be decided on entry</p>
       <p><strong>🥤 Drinks:</strong> Send your drink of choice via WhatsApp to 
         <a href="https://wa.me/2349092139148" target="_blank">0909 213 9148</a>. 
@@ -24,5 +26,14 @@
 
     <button onclick="window.location.href='index.html'">🎮 Play Again</button>
   </div>
+
+  <script>
+    // Get score from URL and show it
+    const params = new URLSearchParams(window.location.search);
+    const score = params.get("score");
+    if (score !== null) {
+      document.getElementById("finalScore").textContent = `⭐ You scored ${score} points before the party invite!`;
+    }
+  </script>
 </body>
 </html>
